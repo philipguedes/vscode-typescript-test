@@ -15,3 +15,34 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+interface Test {
+  a?: number | null;
+  b?: number | null;
+  c?: number | null;
+  d?: number | null;
+  e?: number | null;
+  f?: number | null;
+  g?: number | null;
+  h?: number | null;
+  i?: number | null;
+  j?: number | null;
+}
+
+function test({ a, b, c, d, e, f, g, h, i, j }: Test) {
+
+  const bla = {
+    ...(a && { a }),
+    ...(b && { b }),
+    ...(c && { c }),
+    ...(d && { d }),
+    ...(e && { e }),
+    ...(f && { f }),
+    ...(g && { g }),
+    ...(h && { h }),
+    ...(i && { i }),
+    ...(j && { j }),
+  }
+  return bla;
+}
